@@ -8,6 +8,8 @@ import java.awt.*;
 public class SpinnerRenderer extends JSpinner implements TableCellRenderer {
     public SpinnerRenderer() {
         super();
+        JSpinner.NumberEditor editor = (JSpinner.NumberEditor) super.getEditor();
+        editor.getTextField().setHorizontalAlignment(SwingConstants.LEFT);
         setBorder(new EmptyBorder(0, 0, 0, 0));
     }
 

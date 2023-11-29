@@ -36,4 +36,9 @@ public final class Address implements Serializable {
     public char getBuildingLetter() {
         return buildingLetter;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s, %s (zip: %d), %d%s, квартира: №%s", cityName, streetName, zipCode, buildingNumber, buildingLetter, apartmentNumber);
+    }
 }
